@@ -1,0 +1,12 @@
+# 行尾策略：W3 的 .sh 要在 Armbian 上跑，CRLF 会导致 bad interpreter: /bin/bash^M
+* text=auto
+*.ps1  text eol=crlf
+*.sh   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# 这两个配置文件本身固定 LF，避免每次 checkout 都被转成 CRLF
+.gitignore     text eol=lf
+.gitattributes text eol=lf
